@@ -100,3 +100,4 @@ def run_task(level="easy"):
 if __name__ == "__main__":
     log_start(task="easy", env="campus-env", model=MODEL_NAME)
     run_task("easy")
+    time.sleep(5)
