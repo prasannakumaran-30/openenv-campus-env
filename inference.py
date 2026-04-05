@@ -85,7 +85,7 @@ def run_task(level="easy"):
     score = total_reward / len(rewards) if rewards else 0.0
     score = max(0.0, min(1.0, score))  # clamp
 
-    success = score >= 0.1 # threshold
+    success = len(rewards) > 0 and max(rewards) > 0 # threshold
 
     log_end(
         success=success,

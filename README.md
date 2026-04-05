@@ -1,3 +1,11 @@
+---
+title: OpenEnv Campus
+emoji: 🏫
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+---
 # Campus Operations OpenEnv
 
 A real-world simulation environment where AI agents manage college scheduling under dynamic disruptions.
