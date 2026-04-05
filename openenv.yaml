@@ -1,0 +1,14 @@
+name: campus-operations-env
+description: Dynamic class scheduling environment with disruptions and priority-based decision making
+version: 1.0
+
+entrypoint: app.env:CampusEnv
+
+observation_model: app.models:Observation
+action_model: app.models:Action
+reward_model: app.models:Reward
+
+tasks:
+  - easy
+  - medium
+  - hard
