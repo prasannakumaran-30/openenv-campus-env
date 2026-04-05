@@ -6,9 +6,18 @@ colorTo: green
 sdk: docker
 pinned: false
 ---
+
 # Campus Operations OpenEnv
 
 A real-world simulation environment where AI agents manage college scheduling under dynamic disruptions.
+
+## Highlights
+- Real-world environment simulation (college operations)
+- Dynamic disruptions (faculty unavailability, new classes, conflicts)
+- Multi-step decision-making with partial rewards
+- Priority-aware scheduling system
+- OpenEnv compliant (step, reset, state API)
+- Deployed on Hugging Face Spaces using Docker
 
 ## Features
 - Multi-step decision making
