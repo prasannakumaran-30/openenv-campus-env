@@ -3,10 +3,15 @@ name = "openenv-campus"
 version = "0.1.0"
 description = "OpenEnv Campus Scheduling Environment"
 authors = [{ name = "Prasanna" }]
+
 dependencies = [
     "fastapi",
     "uvicorn",
+    "openenv-core>=0.2.0"
 ]
+
+[project.scripts]
+start = "server.app:main"
 
 [build-system]
 requires = ["setuptools"]
