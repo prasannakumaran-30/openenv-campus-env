@@ -1,0 +1,13 @@
+[project]
+name = "openenv-campus"
+version = "0.1.0"
+description = "OpenEnv Campus Scheduling Environment"
+authors = [{ name = "Prasanna" }]
+dependencies = [
+    "fastapi",
+    "uvicorn",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
