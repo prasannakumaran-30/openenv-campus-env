@@ -1,20 +1,20 @@
 from fastapi import FastAPI
 from app.env import CampusEnv
 from app.models import Action
+import uvicorn
 
 app = FastAPI()
-
 env = CampusEnv()
 
 # ---------------------------
-# HEALTH CHECK
+# ROOT
 # ---------------------------
 @app.get("/")
 def root():
     return {"message": "OpenEnv Campus Running"}
 
 # ---------------------------
-# RESET ENDPOINT
+# RESET
 # ---------------------------
 @app.post("/reset")
 def reset():
@@ -26,7 +26,7 @@ def reset():
     }
 
 # ---------------------------
-# STEP ENDPOINT
+# STEP
 # ---------------------------
 @app.post("/step")
 def step(action: dict):
@@ -40,3 +40,15 @@ def step(action: dict):
         "done": result["done"],
         "info": result.get("info", {})
     }
+
+# ---------------------------
+# MAIN ENTRYPOINT (REQUIRED)
+# ---------------------------
+def main():
+    uvicorn.run("server.app:app", host="0.0.0.0", port=7860)
+
+# ---------------------------
+# RUN
+# ---------------------------
+if __name__ == "__main__":
+    main()
